@@ -35,27 +35,102 @@
       <form class="page-main__questionnaire questionnaire" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset>
           <legend class="visually-hidden">Информация о питомце</legend>
-          <ul class="questionnaire__list">
-            <li class="questionnaire__item">
-              <label class="questionnaire__label">
+          <ul class="questionnaire__text-list">
+            <li class="questionnaire__text-item">
+              <label class="questionnaire__text-label">
                 Имя:*
                 <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="text" name="cat-name" placeholder="Барсик" required>
               </label>
             </li>
-            <li class="questionnaire__item">
-              <label class="questionnaire__label">
+            <li class="questionnaire__text-item">
+              <label class="questionnaire__text-label">
                 Вес:*
                 <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="number" name="cat-weight" placeholder="7" required>
               </label>
             </li>
-            <li class="questionnaire__item">
-              <label class="questionnaire__label">
+            <li class="questionnaire__text-item">
+              <label class="questionnaire__text-label">
                 Возраст:
                 <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="number" name="cat-age" placeholder="7">
               </label>
             </li>
           </ul>
         </fieldset>
+        <fieldset>
+          <legend class="visually-hidden">Ваша цель</legend>
+          <ul class="questionnaire__radio-list">
+            <li class="questionnaire__radio-item">
+              <label class="questionnaire__radio-label">
+                <input class="questionnaire__radio-input" type="radio" name="cat-goal" value="weight-loss" checked>
+                Похудение
+              </label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <label class="questionnaire__radio-label">
+                <input class="questionnaire__radio-input" type="radio" name="cat-goal" value="muscle-gain">
+                Набор массы
+              </label>
+            </li>
+            <li class="questionnaire__radio-item">
+              <label class="questionnaire__radio-label">
+                <input class="questionnaire__radio-input" type="radio" name="cat-goal" value="need-advice">
+                Не знаю (Нужен ваш совет)
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Контактные данные (владельца кота)</legend>
+          <ul class="questionnaire__text-list">
+            <li class="questionnaire__text-item">
+              <label class="questionnaire__text-label">
+                Email:*
+                <input class="questionnaire__text-input" type="email" name="email-address" placeholder="kuklachev@gmail.com" required>
+              </label>
+            </li>
+            <li class="questionnaire__text-item">
+              <label class="questionnaire__text-label">
+                Телефон:*
+                <input class="questionnaire__text-input" type="tel" name="phone-number" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <label class="questionnaire__comment-label">
+          Комментарий
+          <textarea class="qiestionnaire__comment" name="comment" rows="7" cols="30" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
+        <fieldset>
+          <legend>Дополнительно</legend>
+          <ul class="questionnaire__check-list">
+            <li class="questionnaire__check-item">
+              <label class="questionnaire__check-label">
+                <input class="questionnaire__check-input" type="checkbox" name="sweetener" checked>
+                Сахарозаменитель
+              </label>
+            </li>
+            <li class="questionnaire__check-item">
+              <label class="questionnaire__check-label">
+                <input class="questionnaire__check-input" type="checkbox" name="water">
+                Питьевая вода
+              </label>
+            </li>
+            <li class="questionnaire__check-item">
+              <label class="questionnaire__check-label">
+                <input class="questionnaire__check-input" type="checkbox" name="milk">
+                Молоко
+              </label>
+            </li>
+            <li class="questionnaire__check-item">
+              <label class="questionnaire__check-label">
+                <input class="questionnaire__check-input" type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">Отправить заявку</button>
+        <p class="questionnaire__hint">* — Обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
