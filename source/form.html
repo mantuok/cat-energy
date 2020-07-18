@@ -31,6 +31,32 @@
     </header>
     <main class="page-main">
       <h1 class="page-main__heading main-heading">Подбор программы</h1>
+      <p class="page-main__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="page-main__questionnaire questionnaire" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset>
+          <legend class="visually-hidden">Информация о питомце</legend>
+          <ul class="questionnaire__list">
+            <li class="questionnaire__item">
+              <label class="questionnaire__label">
+                Имя:*
+                <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+              </label>
+            </li>
+            <li class="questionnaire__item">
+              <label class="questionnaire__label">
+                Вес:*
+                <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="number" name="cat-weight" placeholder="7" required>
+              </label>
+            </li>
+            <li class="questionnaire__item">
+              <label class="questionnaire__label">
+                Возраст:
+                <input class="questionnaire__text-input questionnaire__text-input--cat-name" type="number" name="cat-age" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
