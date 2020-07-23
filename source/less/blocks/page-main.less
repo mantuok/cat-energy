@@ -1,0 +1,34 @@
+.page-main {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-bottom: 27px;
+  padding-left: 20px;
+}
+
+.page-main--index::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 305px;
+
+  background-color: var(--green-basic);
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.page-main__heading {
+  margin: auto;
+  margin-bottom: 25px;
+}
