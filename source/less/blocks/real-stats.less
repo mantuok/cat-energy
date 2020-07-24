@@ -1,0 +1,42 @@
+.real-stats {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: auto;
+}
+
+.real-stats__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.real-stats__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.real-stats__value {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--black-basic);
+}
+
+.real-stats__stat {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.real-stats__expenses {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  line-height: 20px;
+  text-transform: uppercase;
+}
