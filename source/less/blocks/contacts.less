@@ -28,13 +28,15 @@
   position: relative;
 }
 
-.contacts__map--interactive {
-  width: 100%;
-}
+.contacts__map {
+  &--interactive {
+    width: 100%;
+  }
 
-.contacts__map--static {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
+  &--static {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
 }
