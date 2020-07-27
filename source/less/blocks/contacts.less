@@ -1,0 +1,42 @@
+.contacts__address-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 28px;
+  padding-right: 19px;
+  padding-bottom: 22px;
+  padding-left: 19px;
+}
+
+.contacts__intro {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black-light);
+}
+
+.contacts__address {
+  margin: 0;
+
+  .description-font;
+  line-height: 20px;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+}
+
+.contacts__map {
+  &--interactive {
+    width: 100%;
+  }
+
+  &--static {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+}
