@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Cat Energy - функциональное питание для котов</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body page-body">
-    <header class="page-header">
+    <header class="page-header container">
       <a class="page-header__logo-picture-text logo-picture-text" href="index.html">
         <img src="img/logo-mobile.svg" width="191" height="38" alt="Cat Energy Функциональное питание для котов">
       </a>
@@ -29,7 +30,7 @@
     </header>
     <main class="page-main page-main--catalog">
       <h1 class="page-main__heading main-heading main-heading--supplementary">Каталог продукции</h1>
-      <section class="page-main__catalog product-catalog">
+      <section class="page-main__catalog product-catalog container">
         <h2 class="visually-hidden">Основные товары</h2>
         <ul class="product-catalog__list">
           <li class="product-catalog__item product-item">
@@ -165,15 +166,15 @@
             </table>
             <a class="button product-item__button" href="#">Заказать</a>
           </li>
+          <li class="product-catalog__show-more show-more">
+            <a class="show-more__next" href="#"><span class="visually-hidden">Показать следующие товары</span></a>
+            <h3 class="show-more__heading">Показать еще 100500 товаров</h3>
+            <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
+            <a class="show-more__all button button--supplementary" href="#">Показать все</a>
+          </li>
         </ul>
       </section>
-      <div class="page-main__show-more show-more">
-        <a class="show-more__next" href="#"><span class="visually-hidden">Показать следующие товары</span></a>
-        <h3 class="show-more__heading">Показать еще 100500 товаров</h3>
-        <p class="show-more__text">На самом деле вкусов гораздо больше!</p>
-        <a class="show-more__all button button--supplementary" href="#">Показать все</a>
-      </div>
-      <section class="page-main__additional-products additional-catalog">
+      <section class="page-main__additional-products additional-catalog container">
         <h2 class="additional-catalog__heading">Дополнительные товары</h2>
         <ul class="additional-catalog__list">
           <li class="additional-catalog__item additional-item">
@@ -229,7 +230,7 @@
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
-        <div class="contacts__address-wrapper">
+        <div class="contacts__address-wrapper container">
           <p class="contacts__intro">Приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
@@ -238,8 +239,8 @@
           <img class="contacts__map contacts__map--static" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </div>
       </section>
-      <div class="page-footer__info-wrapper">
-        <a href="index.html" class="page-footer__logo-text logo-text">
+      <div class="page-footer__info-wrapper container">
+        <a class="page-footer__logo-text logo-text" href="index.html">
           <img src="img/logo-footer.svg" width="101" height="18" alt="Cat Energy">
         </a>
         <section class="page-footer__social social">
