@@ -2,9 +2,14 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
 
   &--index {
     color: var(--white-basic);
+
+    @media (min-width: @tablet-width) {
+      color: var(--black-basic);
+    }
   }
 
   &--supplementary {

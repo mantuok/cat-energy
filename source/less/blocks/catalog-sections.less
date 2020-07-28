@@ -4,22 +4,30 @@
   flex-wrap: wrap;
 
   margin: auto;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .catalog-sections__item {
   margin-bottom: 20px;
-
   padding-top: 30px;
-  // padding-right: 33px;
+  padding-right: 33px;
   padding-bottom: 18px;
-  // padding-left: 20px;
+  padding-left: 20px;
 
   background-color: var(--grey-extra-light);
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .catalog-sections__heading {
   margin: 0;
-  // padding-left: 69px;
+  padding-left: 69px;
 
   font-size: 24px;
   line-height: 37px;

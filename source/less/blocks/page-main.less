@@ -23,6 +23,10 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top 10px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-main__heading {
