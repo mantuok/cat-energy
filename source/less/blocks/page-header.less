@@ -3,13 +3,19 @@
   grid-template-columns: min-content auto;
 
   padding-top: 11px;
-  padding-right: 20px;
   padding-bottom: 17px;
-  padding-left: 20px;
 }
 
 .page-header__navigation-toggle {
-  margin-left: auto
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-header__main-navigation {
@@ -17,4 +23,14 @@
   grid-column-end: 3;
 
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }

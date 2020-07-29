@@ -11,4 +11,33 @@
   text-transform: uppercase;
   color: var(--white-basic);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: var(--black-basic);
+    text-align: left;
+  }
+}
+
+.order-program__picture {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    z-index: -1;
+    top: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0px;
+    left: 600px;
+  }
+}
+
+.order-program__button {
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    margin-bottom: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 100px;
+  }
 }

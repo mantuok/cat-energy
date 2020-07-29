@@ -21,5 +21,17 @@
   font-family: Arial, sans-serif;
   line-height: 18px;
 
-  list-style: none;
+  .reset-list();
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 37px;
+    column-gap: 154px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 94px;
+  }
+
 }

@@ -1,5 +1,10 @@
 .product-item {
   display: grid;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .product-item__picture {
