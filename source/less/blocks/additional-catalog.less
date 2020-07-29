@@ -5,12 +5,28 @@
   padding-bottom: 18px;
 }
 
+.additional-catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
 .additional-catalog__list {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 19px;
 
   .reset-list();
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+
+    margin-right: 79px;
+  }
 }
 
 .additional-catalog__heading {
