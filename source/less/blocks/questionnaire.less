@@ -1,15 +1,54 @@
 .questionnaire {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 
-  padding-top: 39px;
-  padding-right: 20px;
-  padding-bottom: 32px;
-  padding-left: 19px;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.questionnaire__fieldset--cat,
+.questionnaire__fieldset--aim {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width-min) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.questionnaire__fieldset--owner,
+.questionnaire__fieldset--comment,
+.questionnaire__fieldset--additional {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .questionnaire__list {
   .reset-list();
+}
+
+.questionnaire__list--owner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.questionnaire__list--additional {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+  grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .questionnaire__fieldset {

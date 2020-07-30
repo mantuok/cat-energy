@@ -10,6 +10,10 @@
   grid-template-columns: 1fr 1fr;
 
   .reset-list();
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width-min) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .real-stats__item {

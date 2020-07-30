@@ -1,6 +1,14 @@
 .additional-item {
   display: grid;
   grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .additional-item__name {
@@ -16,4 +24,11 @@
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 14px;
+}
+
+.additional-item__button {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
