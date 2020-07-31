@@ -2,10 +2,21 @@
   display: grid;
   grid-template-columns: min-content auto;
 
-  padding-top: 12px;
-
   @media (max-width: @mobile-width-max) {
+    padding-top: 12px;
+
     box-shadow: 0 4px 4px var(--black-transparent-25);
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    padding-top: 42px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
   }
 }
 

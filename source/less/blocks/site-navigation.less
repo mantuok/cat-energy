@@ -15,11 +15,18 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-around;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
   }
 }
 
@@ -34,6 +41,12 @@
 
     &:last-child {
       border-bottom: 1px solid var(--grey-light-darker);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:not(:last-child) {
+      margin-right: 35px;
     }
   }
 }
@@ -52,7 +65,19 @@
 
   @media (min-width: @tablet-width) {
     &:not([href]) {
+      padding-bottom: 7px;
+
       border-bottom: 2px solid var(--green-basic);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    color: var(--white-basic);
+
+    &:not([href]) {
+      padding-bottom: 6px;
+
+      border-bottom: 2px solid var(--white-basic);
     }
   }
 }
