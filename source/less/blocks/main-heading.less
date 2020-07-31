@@ -1,4 +1,6 @@
 .main-heading {
+  margin-bottom: 25px;
+
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -8,8 +10,20 @@
     color: var(--white-basic);
 
     @media (min-width: @tablet-width) {
+      margin-bottom: 40px;
+      padding-right: 117px;
+      padding-left: 117px;
+
+      font-size: 60px;
+      line-height: 60px;
       color: var(--black-basic);
       text-align: left;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 830px;
+      padding-left: 190px;
+
     }
   }
 

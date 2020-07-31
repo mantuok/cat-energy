@@ -4,25 +4,46 @@
 
   margin: auto;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+  }
 }
 
 .order-program__slogan {
+  margin: 0;
+  margin-bottom: 28px;
+
   line-height: 14px;
   text-transform: uppercase;
   color: var(--white-basic);
   text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 49px;
+
+    font-size: 20px;
+    line-height: 20px;
     color: var(--black-basic);
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
   }
 }
 
 .order-program__picture {
+  margin-bottom: 4px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     z-index: -1;
-    top: 90px;
+    top: 390px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,11 +54,13 @@
 
 .order-program__button {
   @media (min-width: @tablet-width) {
-    width: 244px;
-    margin-bottom: 200px;
+    align-self: flex-start;
+    margin-left: -5px;
+    margin-bottom: 504px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 100px;
+    margin-left: 0;
+    margin-bottom: 246px;
   }
 }
