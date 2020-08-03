@@ -54,12 +54,12 @@
 .site-navigation__link {
   .reset-link();
 
-  &:hover,
-  &:focus {
+  &:hover[href],
+  &:focus[href] {
     color: var(--black-transparent-60);
   }
 
-  &:active {
+  &:active[href] {
     color: var(--black-transparent-30);
   }
 

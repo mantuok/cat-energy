@@ -21,7 +21,19 @@
   &--submit {
     font: inherit;
     color: var(--white-basic);
+
     border: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--green-semi-dark);
+  }
+
+  &:active {
+    color: var(--white-transparent-30);
+
+    background-color: var(--green-semi-dark);
   }
 
   @media (min-width: @tablet-width) {
