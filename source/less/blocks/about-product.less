@@ -1,20 +1,26 @@
 .about-product {
-  margin: auto;
+  margin-bottom: 46px;
 }
 
 .about-product__heading {
   margin: 0;
+  margin-bottom: 40px;
 
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: var(--black-basic);
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .about-product__description-list {
   display: grid;
   grid-template-rows: 1fr;
-  row-gap: 20px;
+  row-gap: 26px;
 
   .reset-list();
 
@@ -25,12 +31,110 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 37px;
-    column-gap: 154px;
+    row-gap: 101px;
+    column-gap: 60px;
+
+    padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 94px;
+    column-gap: 75px;
+  }
+}
+
+.about-product__description-item {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -2px;
+    left: -80px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: var(--green-basic);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &--why::before {
+    background-image: url(../img/advantage-leaf@1x.png);
+  }
+
+  &--how::before {
+    background-image: url(../img/advantage-powder@1x.png);
+  }
+
+  &--when::before {
+    background-image: url(../img/advantage-dining@1x.png);
+  }
+
+  &--result::before {
+    background-image: url(../img/advantage-clock@1x.png);
+  }
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 250px;
+    padding-top: 144px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      top: 32px;
+      left: 0px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -7px;
+      z-index: -1;
+
+      font-family: Oswald, Arial, sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: var(--grey-extra-light);
+    }
+
+    &--why::after {
+      content: "1";
+
+      left: 118px;
+    }
+
+    &--how::after {
+      content: "2";
+
+      left: 111px;
+    }
+
+    &--when::after {
+      content: "3";
+
+      left: 113px;
+    }
+
+    &--result::after {
+      content: "4";
+
+      left: 113px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: inline;
+    }
   }
 }
