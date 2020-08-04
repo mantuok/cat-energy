@@ -1,12 +1,8 @@
-.page-footer {
-  margin: auto;
-}
-
 .page-footer__info-wrapper {
   display: flex;
   flex-direction: column;
 
-  padding-top: 28px;
+  padding-top: 38px;
   padding-bottom: 22px;
 
   background-color: var(--grey-extra-light);
@@ -14,9 +10,36 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
+
+    padding-top: 52px;
+    padding-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 56px;
   }
 }
 
 .page-footer__logo-text {
-  margin: auto;
+  @media (max-width: @mobile-width-max) {
+    padding-right: 76px;
+    padding-bottom: 29px;
+    padding-left: 76px;
+
+    border-bottom: 1px solid var(--grey-basic-light);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 17px;
+  }
+
+  &:hover[href],
+  &:focus[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
 }
