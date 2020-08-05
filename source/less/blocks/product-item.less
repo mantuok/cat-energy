@@ -1,16 +1,27 @@
 .product-item {
+  position: relative;
+
   display: grid;
   grid-template-rows: min-content 1fr min-content;
 
-  border-bottom: 1px solid var(--grey-semi-light);
+  @media (max-width: @mobile-width-max) {
+    border-bottom: 1px solid var(--grey-semi-light);
 
-  &:first-child {
-    border-top: 1px solid var(--grey-semi-light);
+    &:first-child {
+      border-top: 1px solid var(--grey-semi-light);
+    }
   }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+
+    width: 324px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+    padding-left: 36px;
+
+    background-image: linear-gradient(to bottom, var(--white-basic) 22%, var(--grey-extra-light) 22%);
   }
 }
 
@@ -20,7 +31,11 @@
   grid-column-start: 1;
   grid-column-end: 2;
 
-  padding-top: 10px;
+  @media (min-width: @tablet-width) {
+    margin: auto;
+    // temporary
+    margin-bottom: 141px;
+  }
 }
 
 .product-item__name {
@@ -37,7 +52,19 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
+  color: var(--grey-extra-dark);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-right: 56px;
+    padding-bottom: 18px;
+    padding-left: 58px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .product-item__details {
@@ -50,14 +77,39 @@
   font-size: 12px;
   line-height: 12px;
   color: var(--grey-dark);
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product-item__detail-name {
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid var(--grey-basic);
+  }
 }
 
 .product-item__detail-value {
   text-align: right;
+  vertical-align: top;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid var(--grey-basic);
+
+    &--taste,
+    &--price {
+      padding-top: 6px;
+    }
+  }
 }
 
 .product-item__button {
@@ -67,4 +119,10 @@
   grid-column-end: 3;
 
   margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+
+    margin-bottom: 0;
+  }
 }

@@ -16,6 +16,21 @@
     color: var(--grey-dark);
 
     background-color: var(--grey-extra-light);
+
+    &:hover,
+    &:focus {
+      background-color: var(--grey-semi-light);
+    }
+
+    &:active {
+      background-color: var(--grey-semi-light);
+      opacity: 0.3;
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 0;
+    }
   }
 
   &--catalog {
@@ -48,5 +63,15 @@
 
     font-size: 20px;
     line-height: 0;
+
+    &--catalog {
+      padding-top: 9px;
+      padding-right: 93px;
+      padding-bottom: 9px;
+      padding-left: 93px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
