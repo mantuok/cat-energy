@@ -12,6 +12,17 @@
 
   background-color: var(--green-basic);
 
+  &:hover,
+  &:focus {
+    background-color: var(--green-semi-dark);
+  }
+
+  &:active {
+    color: var(--white-transparent-30);
+
+    background-color: var(--green-semi-dark);
+  }
+
   &--supplementary {
     color: var(--grey-dark);
 
@@ -19,12 +30,15 @@
 
     &:hover,
     &:focus {
+      color: var(--grey-dark);
+
       background-color: var(--grey-semi-light);
     }
 
     &:active {
+      color: var(--grey-transparent-30);
+
       background-color: var(--grey-semi-light);
-      opacity: 0.3;
     }
 
     @media (min-width: @tablet-width) {
@@ -42,17 +56,6 @@
     color: var(--white-basic);
 
     border: none;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: var(--green-semi-dark);
-  }
-
-  &:active {
-    color: var(--white-transparent-30);
-
-    background-color: var(--green-semi-dark);
   }
 
   @media (min-width: @tablet-width) {
