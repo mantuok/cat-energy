@@ -1,4 +1,9 @@
 .main-heading {
+  margin: 0;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -8,12 +13,37 @@
     color: var(--white-basic);
 
     @media (min-width: @tablet-width) {
+      margin-bottom: 40px;
+      padding-right: 117px;
+      padding-left: 117px;
+
+      font-size: 60px;
+      line-height: 60px;
       color: var(--black-basic);
       text-align: left;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-right: 830px;
+      padding-left: 190px;
     }
   }
 
   &--supplementary {
+    margin-bottom: 42px;
+
     color: var(--black-basic);
+    text-align: left;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 30px;
+
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 110px;
+    }
   }
 }

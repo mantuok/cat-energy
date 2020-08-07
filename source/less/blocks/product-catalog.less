@@ -1,23 +1,19 @@
-.product-catalog {
-  margin: auto;
-}
-
 .product-catalog__list {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 19px;
 
   .reset-list();
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 59px;
+    row-gap: 18px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 22px;
+
+    padding-right: 70px;
+    padding-left: 70px;
   }
 }

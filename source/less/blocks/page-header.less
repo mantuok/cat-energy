@@ -2,12 +2,37 @@
   display: grid;
   grid-template-columns: min-content auto;
 
-  padding-top: 11px;
-  padding-bottom: 17px;
+  @media (max-width: @mobile-width-max) {
+    padding-top: 12px;
+
+    box-shadow: 0 4px 4px var(--black-transparent-25);
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+    padding-bottom: 85px;
+
+    &--catalog {
+      padding-bottom: 80px;
+    }
+  }
 }
 
 .page-header__navigation-toggle {
+  position: relative;
+
   margin-left: auto;
+  margin-bottom: 51px;
+
+  background-color: transparent;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -16,13 +41,41 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    left: -12px;
+
+    width: 26px;
+    height: 1.5px;
+
+    background-color: var(--black-basic);
+
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 18px;
+    left: -13px;
+
+    width: 26px;
+    height: 1.5px;
+
+    background-color: var(--black-basic);
+
+    transform: rotate(-45deg);
+  }
 }
 
 .page-header__main-navigation {
   grid-column-start: 1;
   grid-column-end: 3;
-
-  margin: auto;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;

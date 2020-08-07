@@ -1,7 +1,7 @@
 .button {
-  padding-top: 7px;
+  padding-top: 11px;
   padding-right: 44px;
-  padding-bottom: 7px;
+  padding-bottom: 11px;
   padding-left: 44px;
 
   line-height: 18px;
@@ -12,15 +12,91 @@
 
   background-color: var(--green-basic);
 
+  &:hover,
+  &:focus {
+    background-color: var(--green-semi-dark);
+  }
+
+  &:active {
+    color: var(--white-transparent-30);
+
+    background-color: var(--green-semi-dark);
+  }
+
   &--supplementary {
     color: var(--grey-dark);
 
     background-color: var(--grey-extra-light);
+
+    &:hover,
+    &:focus {
+      color: var(--grey-dark);
+
+      background-color: var(--grey-semi-light);
+    }
+
+    &:active {
+      color: var(--grey-transparent-30);
+
+      background-color: var(--grey-semi-light);
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 0;
+    }
+  }
+
+  &--catalog {
+    font-size: 16px;
   }
 
   &--submit {
     font: inherit;
     color: var(--white-basic);
+
     border: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-right: 27px;
+    padding-bottom: 27px;
+    padding-left: 26px;
+
+    font-size: 20px;
+    line-height: 0;
+
+    &--catalog {
+      padding-top: 9px;
+      padding-right: 93px;
+      padding-bottom: 9px;
+      padding-left: 93px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--supplementary {
+      padding-top: 9px;
+      padding-right: 77px;
+      padding-bottom: 11px;
+      padding-left: 77px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--catalog {
+      padding-right: 53px;
+      padding-left: 53px;
+    }
+
+    &--supplementary {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
   }
 }

@@ -1,11 +1,36 @@
 .powered-by {
-  margin: auto;
+  @media (max-width: @mobile-width-max) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+
+    width: 163px;
+  }
 }
 
 .powered-by__link {
-  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
   color: var(--grey-dark);
+
+  &:hover,
+  &:focus,
+  &:active {
+    path {
+      fill: var(--green-basic);
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

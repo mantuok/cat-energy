@@ -9,7 +9,7 @@
 
 .questionnaire__fieldset--cat,
 .questionnaire__fieldset--aim {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width-min) {
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
     grid-column-start: 1;
     grid-column-end: 3;
   }
@@ -43,7 +43,7 @@
   grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
@@ -82,7 +82,7 @@
 }
 
 .questionnaire__hint {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: var(--black-basic);

@@ -6,6 +6,15 @@
   flex-wrap: wrap;
 
   margin: auto;
+  padding-top: 27px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 29px;
+
+    &--catalog {
+      padding-top: 0;
+    }
+  }
 }
 
 .page-main--index::before {
@@ -29,15 +38,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -69px;
+    top: -194px;
 
     width: 50%;
-    height: 438px;
+    height: 694px;
   }
-}
-
-.page-main__heading {
-  margin-bottom: 25px;
 }
 
 .page-main__intro {

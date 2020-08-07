@@ -3,16 +3,22 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin: auto;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 41px;
   }
 }
 
 .catalog-sections__item {
-  margin-bottom: 20px;
   padding-top: 30px;
   padding-right: 33px;
   padding-bottom: 18px;
@@ -20,30 +26,227 @@
 
   background-color: var(--grey-extra-light);
 
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-right: 279px;
+    padding-bottom: 57px;
+    padding-left: 52px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     width: 570px;
+    padding-right: 56px;
+    padding-bottom: 59px;
   }
 }
 
 .catalog-sections__heading {
+  position: relative;
+
   margin: 0;
-  padding-left: 69px;
+  margin-bottom: 29px;
+  padding-left: 71px;
 
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   color: var(--black-basic);
   text-transform: uppercase;
+
+
+  &--slim::before,
+  &--pro::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: 2px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: var(--green-basic);
+  }
+
+  &--slim::after,
+  &--pro::after {
+    content: "";
+
+    position: absolute;
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &--slim::after {
+    top: -9px;
+    left: 9px;
+
+    width: 36px;
+    height: 50px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    top: 5px;
+    left: -7px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+    padding-left: 0;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &--slim::before,
+    &--pro::before {
+      top: 15px;
+      left: 395px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 4px;
+      left: 425px;
+
+      width: 140px;
+      height: 192px;
+    }
+
+    &--pro::after {
+      top: 58px;
+      left: 360px;
+
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 74px;
+    padding-left: 162px;
+
+    &--slim::before,
+    &--pro::before {
+      top: -32px;
+      left: 0;
+
+      width: 100px;
+      height: 102px;
+    }
+
+    &--slim::after {
+      top: -37px;
+      left: 15px;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: -11px;
+      left: -19px;
+
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .catalog-sections__description {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 43px;
+
+  font-family: "Arial", sans-serif;
   line-height: 18px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
+    br {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .catalog-sections__link {
+  position: relative;
+
   font-size: 16px;
   color: var(--black-basic);
   text-transform: uppercase;
   text-decoration: none;
+
+  &:active {
+    color: var(--black-transparent-30);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 101px;
+
+    width: 24px;
+    height: 12px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 32px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active::after {
+    width: 32px;
+
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 11' style='enable-background:new 0 0 32 11;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0 %7B fill: %233F4242;%0Aopacity: 0.3 %7D %3C/style%3E%3Cpolygon class='st0' points='25.4,0 32,5.5 25.4,11 25.4,6.6 0,6.6 0,4.4 25.4,4.4 '/%3E%3C/svg%3E");
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 9px;
+      left: 132px;
+    }
+  }
 }
