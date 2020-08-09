@@ -1,5 +1,9 @@
 .real-stats {
-  margin-bottom: 38px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 138px;
+  }
 }
 
 .real-stats__list {
@@ -12,7 +16,8 @@
   .reset-list();
 
   @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto 1fr;
+    column-gap: 42px;
   }
 }
 
@@ -28,6 +33,13 @@
   padding-right: 35px;
   padding-bottom: 16px;
   padding-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+    padding-right: 56px;
+    padding-bottom: 18px;
+    padding-left: 56px;
+  }
 }
 
 .real-stats__item--days {
@@ -35,6 +47,13 @@
   padding-right: 20px;
   padding-bottom: 16px;
   padding-left: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+    padding-right: 30px;
+    padding-bottom: 16px;
+    padding-left: 29px;
+  }
 }
 
 .real-stats__value {
@@ -42,6 +61,11 @@
   line-height: 24px;
   text-transform: uppercase;
   color: var(--black-basic);
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .real-stats__stat {
@@ -60,6 +84,20 @@
   line-height: 12px;
 
   background-color: var(--grey-light);
+
+  @media (min-width: @tablet-width) {
+    top: 62px;
+    right: 16px;
+
+    width: 130px;
+    padding-right: 0;
+    padding-left: 0;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: var(--white-basic);
+  }
 }
 
 .real-stats__expenses {
@@ -67,6 +105,29 @@
   grid-column-end: 3;
 
   line-height: 20px;
+  color: var(--black-basic);
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    padding-left: 115px;
+    padding-top: 9px;
+
+    font-size: 20px;
+    line-height: 27px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    padding-left: 0;
+    padding-top: 37px;
+
+    text-align: left;
+  }
 }
