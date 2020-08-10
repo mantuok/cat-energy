@@ -1,14 +1,20 @@
 .cat-slider {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .cat-slider__cat {
   margin-right: -20px;
   margin-left: -20px;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 245px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 265px;
   }
 }
 
@@ -20,12 +26,12 @@
 }
 
 .cat-slider__toggle {
+  align-self: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 210px;
-  margin: auto;
   padding-right: 4px;
   padding-left: 9px;
 
@@ -33,6 +39,10 @@
     width: 572px;
     padding-right: 2px;
     padding-left: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: flex-end;
   }
 }
 

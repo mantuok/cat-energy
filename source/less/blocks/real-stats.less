@@ -4,6 +4,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 138px;
   }
+
+  @media (min-width: @desktop-width) {
+    justify-self: start;
+  }
 }
 
 .real-stats__list {
@@ -18,6 +22,10 @@
   @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
     grid-template-columns: auto auto 1fr;
     column-gap: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 41px;
   }
 }
 
@@ -39,6 +47,13 @@
     padding-right: 56px;
     padding-bottom: 18px;
     padding-left: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // padding-top: 15px;
+    // padding-right: 56px;
+    // padding-bottom: 18px;
+    // padding-left: 56px;
   }
 }
 
@@ -98,6 +113,10 @@
 
     background-color: var(--white-basic);
   }
+
+  @media (min-width: @desktop-width) {
+    background-color: var(--grey-light);
+  }
 }
 
 .real-stats__expenses {
@@ -126,8 +145,14 @@
     grid-column-end: 3;
 
     padding-left: 0;
-    padding-top: 37px;
+    padding-top: 23px;
 
     text-align: left;
+  }
+}
+
+.real-stats__total-stat {
+  @media (min-width: @desktop-width) {
+    margin-right: 59px;
   }
 }
