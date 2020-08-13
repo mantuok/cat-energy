@@ -29,10 +29,10 @@
       </nav>
     </header>
     <main class="page-main page-main--form">
-      <h1 class="page-main__heading main-heading main-heading--form">Подбор программы</h1>
-      <p class="page-main__intro container">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="page-main__questionnaire questionnaire" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="questionnaire__fieldset questionnaire__fieldset--cat container">
+      <h1 class="page-main__heading main-heading main-heading--form container">Подбор программы</h1>
+      <p class="page-main__intro container container--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <form class="page-main__questionnaire questionnaire container container--form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="questionnaire__fieldset questionnaire__fieldset--cat">
           <legend class="visually-hidden">Информация о питомце</legend>
           <ul class="questionnaire__list questionnaire__list--cat">
             <li class="questionnaire__item questionnaire__item--cat">
@@ -49,7 +49,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="questionnaire__fieldset questionnaire__fieldset--aim container">
+        <fieldset class="questionnaire__fieldset questionnaire__fieldset--aim">
           <legend class="visually-hidden">Ваша цель</legend>
           <ul class="questionnaire__list questionnaire__list--aim">
             <li class="questionnaire__item questionnaire__item--aim">
@@ -66,7 +66,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="questionnaire__fieldset questionnaire__fieldset--owner container">
+        <fieldset class="questionnaire__fieldset questionnaire__fieldset--owner">
           <legend class="questionnaire__heading questionnaire__heading--owner">Контактные данные (владельца кота)</legend>
           <ul class="questionnaire__list questionnaire__list--owner">
             <li class="questionnaire__item questionnaire__item--owner">
@@ -79,11 +79,11 @@
             </li>
           </ul>
         </fieldset>
-        <div class="questionnaire__fieldset questionnaire__fieldset--comment container">
+        <div class="questionnaire__fieldset questionnaire__fieldset--comment">
           <label class="questionnaire__heading questionnaire__heading--comment" for="comment">Комментарий</label>
           <textarea class="questionnaire__input questionnaire__input--comment" id="comment" name="comment" rows="7" cols="41" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <fieldset class="questionnaire__fieldset questionnaire__fieldset--additional container">
+        <fieldset class="questionnaire__fieldset questionnaire__fieldset--additional">
           <legend class="questionnaire__heading questionnaire__heading--additional">Дополнительно</legend>
           <ul class="questionnaire__list questionnaire__list--additional">
             <li class="questionnaire__item questionnaire__item--additional">
@@ -104,10 +104,10 @@
             </li>
           </ul>
         </fieldset>
-        <div class="questionnaire__button-wrapper container">
+        <div class="questionnaire__bottom-wrapper">
           <button class="questionnaire__button button button--submit" type="submit">Отправить заявку</button>
+          <p class="questionnaire__hint">* — Обязательные поля</p>
         </div>
-        <p class="questionnaire__hint container">* — Обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
