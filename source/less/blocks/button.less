@@ -24,6 +24,7 @@
   }
 
   &--supplementary {
+    font-size: 16px;
     color: var(--grey-dark);
 
     background-color: var(--grey-extra-light);
@@ -52,7 +53,14 @@
   }
 
   &--submit {
-    font: inherit;
+    padding-top: 11px;
+    padding-right: 78px;
+    padding-bottom: 9px;
+    padding-left: 78px;
+
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
     color: var(--white-basic);
 
     border: none;
@@ -86,6 +94,16 @@
       font-size: 16px;
       line-height: 20px;
     }
+
+    &--submit {
+      padding-top: 26px;
+      padding-right: 64px;
+      padding-bottom: 26px;
+      padding-left: 65px;
+
+      font-size: 20px;
+      line-height: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -97,6 +115,11 @@
     &--supplementary {
       padding-right: 40px;
       padding-left: 40px;
+    }
+
+    &--submit {
+      padding-right: 208px;
+      padding-left: 208px;
     }
   }
 }

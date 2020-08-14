@@ -1,8 +1,6 @@
 .main-heading {
   margin: 0;
   margin-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   font-size: 36px;
   line-height: 36px;
@@ -29,21 +27,28 @@
     }
   }
 
-  &--supplementary {
+  &--catalog {
     margin-bottom: 42px;
 
     color: var(--black-basic);
     text-align: left;
 
     @media (min-width: @tablet-width) {
-      padding-left: 30px;
-
       font-size: 60px;
       line-height: 60px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      padding-left: 110px;
+  &--form {
+    margin-bottom: 36px;
+
+    text-align: left;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 54px;
+
+      font-size: 60px;
+      line-height: 60px;
     }
   }
 }

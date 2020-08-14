@@ -1,13 +1,41 @@
 .additional-item {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 14px;
+
+  padding-top: 12px;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--grey-basic);
+
+  &:first-child {
+    border-top: 1px solid var(--grey-basic);
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+
+    padding-top: 26px;
+    padding-right: 37px;
+    padding-bottom: 27px;
+    padding-left: 38px;
+
+    border-right: 1px solid var(--grey-basic);
+    border-left: 1px solid var(--grey-basic);
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 244px;
+    align-items: center;
+
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
+
+    border-right: none;
+    border-left: none;
   }
 }
 
@@ -18,17 +46,71 @@
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-item__details {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional-item__size {
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 78%;
+    padding-top: 2px;
+    padding-right: 23px;
+
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70%;
+    padding-right: 0;
+
+    text-align: left;
+  }
+}
+
+.additional-item__price {
+  padding: 0;
+
+  text-align: right;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 16px;
+
+    text-align: left;
+  }
 }
 
 .additional-item__button {
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
   }
 }
