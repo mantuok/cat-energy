@@ -86,8 +86,16 @@
             </ul>
           </div>
           <div class="real-example__visual cat-slider">
-            <img class="cat-slider__cat cat-slider__cat--before" src="img/before-mobile@1x.png" width="311" height="232" alt="Кот Борис До">
-            <img class="cat-slider__cat cat-slider__cat--after" src="img/after-mobile@1x.png" width="311" height="232" alt="Кот Борис После">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <img class="cat-slider__cat cat-slider__cat--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="232" alt="Кот Борис До">
+            </picture>
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+              <img class="cat-slider__cat cat-slider__cat--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="232" alt="Кот Борис После">
+            </picture>
             <div class="cat-slider__toggle">
               <span class="cat-slider__label">Было</span>
               <div class="cat-slider__range"><span class="cat-slider__handle"></span></div>
@@ -106,7 +114,11 @@
         </div>
         <div class="contacts__map-wrapper">
           <iframe class="contacts__map contacts__map--interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6156300622001!2d30.320561316093325!3d59.93851998187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzE4LjciTiAzMMKwMTknMjEuOSJF!5e0!3m2!1sru!2sru!4v1595017535389!5m2!1sru!2sru" width="320" height="361" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <img class="contacts__map contacts__map--static" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="contacts__map contacts__map--static" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
         </div>
       </section>
       <div class="page-footer__info-wrapper container">
