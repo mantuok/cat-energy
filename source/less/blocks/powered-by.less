@@ -21,16 +21,17 @@
   line-height: 18px;
   text-decoration: none;
   color: var(--grey-dark);
+}
 
-  &:hover,
-  &:focus,
-  &:active {
-    path {
-      fill: var(--green-basic);
-    }
-  }
+.powered-by__logo {
+  fill: var(--grey-semi-dark);
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.powered-by__link:hover .powered-by__logo,
+.powered-by__link:focus .powered-by__logo {
+  fill: var(--green-basic);
+}
+
+.powered-by__link:active {
+  opacity: 0.3;
 }

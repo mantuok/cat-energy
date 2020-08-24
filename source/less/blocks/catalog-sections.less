@@ -13,8 +13,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-
-    margin-bottom: 41px;
   }
 }
 
@@ -27,7 +25,7 @@
   background-color: var(--grey-extra-light);
 
   &:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: @tablet-width) {
@@ -37,7 +35,7 @@
     padding-left: 52px;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
 
@@ -173,7 +171,7 @@
 
 .catalog-sections__description {
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
 
   font-family: "Arial", sans-serif;
   line-height: 18px;
@@ -196,57 +194,39 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 }
 
 .catalog-sections__link {
-  position: relative;
-
   font-size: 16px;
   color: var(--black-basic);
   text-transform: uppercase;
   text-decoration: none;
 
   &:active {
-    color: var(--black-transparent-30);
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 6px;
-    left: 101px;
-
-    width: 24px;
-    height: 12px;
-
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-  }
-
-  &:hover::after,
-  &:focus::after {
-    width: 32px;
-
-    background-image: url("../img/icon-right-arrow-verylong.svg");
-  }
-
-  &:active::after {
-    width: 32px;
-
-    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 32 11' style='enable-background:new 0 0 32 11;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0 %7B fill: %233F4242;%0Aopacity: 0.3 %7D %3C/style%3E%3Cpolygon class='st0' points='25.4,0 32,5.5 25.4,11 25.4,6.6 0,6.6 0,4.4 25.4,4.4 '/%3E%3C/svg%3E");
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-
-    &::after {
-      top: 9px;
-      left: 132px;
-    }
   }
+}
+
+.catalog-sections__slim,
+.catalog-sections__pro {
+  margin-right: 13px;
+
+  vertical-align: middle;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.catalog-sections__link:hover .catalog-sections__arrow,
+.catalog-sections__link:focus .catalog-sections__arrow {
+  transform: translateX(3px) scaleX(1.2);
+  transition: all 0.5s ease;
 }
