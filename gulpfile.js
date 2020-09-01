@@ -115,4 +115,3 @@ const watcher = () => {
 const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
 
 exports.build = build;
-
