@@ -26,8 +26,7 @@ const copy = () => {
   return gulp.src ([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/*.html"
+    "source/js/**"
   ], {
     base: "source"
   })
@@ -54,6 +53,13 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// copy Html
+
+const html = () => {
+  return gulp.src("source/*.html", {base: "source"})
+  .pipe(gulp.dest("build"));
+}
 
 // Image Optimization
 
@@ -108,10 +114,24 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/*.html", gulp.series(html));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
+// const watcher = () => {
+//   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+//   gulp.watch("source/*.html", gulp.series(html));
+//   gulp.watch("source/*.html").on("change", sync.reload);
+// };
 
-exports.build = build;
+// const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
+
+// exports.build = build;
+
+// const start = gulp.series(build, server, watcher);
+
+// exports.start = start;
+
+gulp.task("build", gulp.series(clean, copy, styles, html, images, createWebp, sprite));
+gulp.task("start", gulp.series("build", server, watcher));
