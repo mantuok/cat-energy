@@ -2,18 +2,15 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  .reset-list();
-
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     row-gap: 26px;
+    column-gap: 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 29px;
-
-    padding-right: 70px;
-    padding-left: 70px;
+    column-gap: 80px;
   }
 }
