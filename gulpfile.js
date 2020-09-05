@@ -7,6 +7,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const htmlmin = require("gulp-htmlmin");
+const minify = require("gulp-minify");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -60,18 +61,22 @@ const html = () => {
   return gulp.src("source/*.html", {base: "source"})
     .pipe(htmlmin())
     .pipe(rename({
-      suffix: '.min'
+      suffix: ".min"
     }))
     .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
 
-//cope JS
+// JS
 
 const js = () => {
-  return gulp.src("source/js/**", {base: "source"})
-  .pipe(gulp.dest("build"));
+  return gulp.src("source/js/*.js", {base: "source"})
+    .pipe(minify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("build"));
 }
 
 exports.js = js;
