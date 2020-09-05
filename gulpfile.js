@@ -59,9 +59,9 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html", {base: "source"})
     .pipe(htmlmin())
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest("build"));
 }
 
@@ -115,7 +115,8 @@ exports.sprite = sprite;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build",
+      index: "index.min.html"
     },
     cors: true,
     notify: false,
