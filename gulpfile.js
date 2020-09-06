@@ -6,6 +6,8 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
+const htmlmin = require("gulp-htmlmin");
+const minify = require("gulp-minify");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -25,8 +27,7 @@ exports.clean = clean;
 const copy = () => {
   return gulp.src ([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**"
+    "source/img/**"
   ], {
     base: "source"
   })
@@ -54,12 +55,31 @@ const styles = () => {
 
 exports.styles = styles;
 
-// copy Html
+// Html
 
 const html = () => {
   return gulp.src("source/*.html", {base: "source"})
-  .pipe(gulp.dest("build"));
+    .pipe(htmlmin())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("build"));
 }
+
+exports.html = html;
+
+// JS
+
+const js = () => {
+  return gulp.src("source/js/*.js", {base: "source"})
+    .pipe(minify())
+    .pipe(rename({
+      suffix: ".min"
+    }))
+    .pipe(gulp.dest("build"));
+}
+
+exports.js = js;
 
 // Image Optimization
 
@@ -100,7 +120,8 @@ exports.sprite = sprite;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build",
+      index: "index.min.html"
     },
     cors: true,
     notify: false,
@@ -119,19 +140,5 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-// const watcher = () => {
-//   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-//   gulp.watch("source/*.html", gulp.series(html));
-//   gulp.watch("source/*.html").on("change", sync.reload);
-// };
-
-// const build = gulp.series(clean, copy, styles, images, createWebp, sprite);
-
-// exports.build = build;
-
-// const start = gulp.series(build, server, watcher);
-
-// exports.start = start;
-
-gulp.task("build", gulp.series(clean, copy, styles, html, images, createWebp, sprite));
+gulp.task("build", gulp.series(clean, copy, styles, html, js, images, createWebp, sprite));
 gulp.task("start", gulp.series("build", server, watcher));
