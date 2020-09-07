@@ -60,7 +60,7 @@
     }
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 50px;
+      margin-bottom: 2px;
       padding-top: 29px;
       padding-right: 28px;
       padding-bottom: 29px;
@@ -103,7 +103,7 @@
     padding-bottom: 33px;
 
     @media (min-width: @tablet-width) {
-      padding-top: 61px;
+      padding-top: 22px;
       padding-bottom: 59px;
     }
 
@@ -436,6 +436,128 @@
   }
 }
 
+.questionnaire__fieldset-wrapper--owner {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 75px;
+
+  &::after {
+    content: "";
+    display: block;
+    flex-grow: 1;
+
+    margin-right: -20px;
+    margin-bottom: 19px;
+
+    width: calc(100% - 114px);
+    height: 2px;
+
+    background-color: var(--green-basic);
+
+    @media (min-width: @tablet-width) {
+      width: 145px;
+      margin-top: 7px;
+      margin-right: -71px;
+      margin-bottom: 0;
+      margin-left: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 7px;
+      margin-right: -110px;
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      display: block;
+
+      width: 30px;
+      height: 2px;
+      margin-top: 7px;
+      margin-right: 40px;
+      margin-left: -70px;
+
+      background-color: var(--green-basic);
+
+      @media (min-width: @desktop-width) {
+        width: 70px;
+        height: 2px;
+        margin-top: 7px;
+        margin-right: 40px;
+        margin-left: -110px;
+      }
+    }
+  }
+}
+
+.questionnaire__fieldset-wrapper--additional {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 63px;
+
+  &::after {
+    content: "";
+
+    display: block;
+
+    width: calc(100% - 144px);
+    height: 2px;
+    margin-top: 5px;
+    margin-right: -20px;
+
+    background-color: var(--green-basic);
+
+    @media (min-width: @tablet-width) {
+      flex-grow: 1;
+
+      width: 447px;
+      margin-top: 9px;
+      margin-right: -71px;
+      margin-bottom: 0;
+      margin-left: 42px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 7px;
+      margin-right: -110px;
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      display: block;
+
+      width: 30px;
+      height: 2px;
+      margin-top: 9px;
+      margin-right: 40px;
+      margin-left: -70px;
+
+      background-color: var(--green-basic);
+
+      @media (min-width: @desktop-width) {
+        width: 70px;
+        height: 2px;
+        margin-top: 7px;
+        margin-right: 40px;
+        margin-left: -110px;
+      }
+    }
+  }
+}
+
 .questionnaire__heading {
   font-size: 24px;
   line-height: 26px;
@@ -447,65 +569,7 @@
   }
 
   &--owner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    margin-bottom: 1px;
     padding: 0;
-    padding-top: 26px;
-
-    &::after {
-      content: "";
-      display: block;
-      flex-grow: 1;
-
-      margin-right: -20px;
-      margin-bottom: 19px;
-
-      width: calc(100% - 114px);
-      height: 2px;
-
-      background-color: var(--green-basic);
-
-      @media (min-width: @tablet-width) {
-        width: 145px;
-        margin-top: 7px;
-        margin-right: -71px;
-        margin-bottom: 0;
-        margin-left: 42px;
-      }
-
-      @media (min-width: @desktop-width) {
-        margin-top: 7px;
-        margin-right: -110px;
-        margin-bottom: 0;
-        margin-left: 40px;
-      }
-    }
-
-    @media (min-width: @tablet-width) {
-      &::before {
-        content: "";
-        display: block;
-
-        width: 30px;
-        height: 2px;
-        margin-top: 7px;
-        margin-right: 40px;
-        margin-left: -70px;
-
-        background-color: var(--green-basic);
-
-        @media (min-width: @desktop-width) {
-          width: 70px;
-          height: 2px;
-          margin-top: 7px;
-          margin-right: 40px;
-          margin-left: -110px;
-        }
-      }
-    }
   }
 
   &--comment {
@@ -578,67 +642,66 @@
   }
 
   &--additional {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
 
-    width: 100%;
-    margin-bottom: 1px;
+    // width: 100%;
+    // margin-bottom: 1px;
     padding: 0;
-    padding-top: 22px;
 
-    &::after {
-      content: "";
+    // &::after {
+    //   content: "";
 
-      display: block;
+    //   display: block;
 
-      width: calc(100% - 144px);
-      height: 2px;
-      margin-top: 5px;
-      margin-right: -20px;
+    //   width: calc(100% - 144px);
+    //   height: 2px;
+    //   margin-top: 5px;
+    //   margin-right: -20px;
 
-      background-color: var(--green-basic);
+    //   background-color: var(--green-basic);
 
-      @media (min-width: @tablet-width) {
-        flex-grow: 1;
+    //   @media (min-width: @tablet-width) {
+    //     flex-grow: 1;
 
-        width: 447px;
-        margin-top: 9px;
-        margin-right: -71px;
-        margin-bottom: 0;
-        margin-left: 42px;
-      }
+    //     width: 447px;
+    //     margin-top: 9px;
+    //     margin-right: -71px;
+    //     margin-bottom: 0;
+    //     margin-left: 42px;
+    //   }
 
-      @media (min-width: @desktop-width) {
-        margin-top: 7px;
-        margin-right: -110px;
-        margin-bottom: 0;
-        margin-left: 40px;
-      }
-    }
+    //   @media (min-width: @desktop-width) {
+    //     margin-top: 7px;
+    //     margin-right: -110px;
+    //     margin-bottom: 0;
+    //     margin-left: 40px;
+    //   }
+    // }
 
-    @media (min-width: @tablet-width) {
-      &::before {
-        content: "";
-        display: block;
+    // @media (min-width: @tablet-width) {
+    //   &::before {
+    //     content: "";
+    //     display: block;
 
-        width: 30px;
-        height: 2px;
-        margin-top: 9px;
-        margin-right: 40px;
-        margin-left: -70px;
+    //     width: 30px;
+    //     height: 2px;
+    //     margin-top: 9px;
+    //     margin-right: 40px;
+    //     margin-left: -70px;
 
-        background-color: var(--green-basic);
+    //     background-color: var(--green-basic);
 
-        @media (min-width: @desktop-width) {
-          width: 70px;
-          height: 2px;
-          margin-top: 7px;
-          margin-right: 40px;
-          margin-left: -110px;
-        }
-      }
-    }
+    //     @media (min-width: @desktop-width) {
+    //       width: 70px;
+    //       height: 2px;
+    //       margin-top: 7px;
+    //       margin-right: 40px;
+    //       margin-left: -110px;
+    //     }
+    //   }
+    // }
   }
 }
 
