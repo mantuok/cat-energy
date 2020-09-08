@@ -1,6 +1,17 @@
 var menuButton = document.querySelector(".page-header__navigation-toggle");
 var menu = document.querySelector(".page-header__main-navigation");
-var header = document.querySelector(".page-header")
+var header = document.querySelector(".page-header");
+
+document.addEventListener("DOMContentLoaded", function () {
+  menuButton.classList.remove("page-header__navigation-toggle--open");
+  menuButton.classList.add("page-header__navigation-toggle--closed");
+
+  menu.classList.remove("page-header__main-navigation--open");
+  menu.classList.add("page-header__main-navigation--closed");
+
+  header.classList.remove("page-header--open");
+  header.classList.add("page-header--closed");
+});
 
 menuButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -13,4 +24,4 @@ menuButton.addEventListener("click", function (evt) {
 
   header.classList.toggle("page-header--open");
   header.classList.toggle("page-header--closed");
-})
+});
