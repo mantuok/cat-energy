@@ -185,7 +185,12 @@
     display: flex;
     align-items: center;
   }
+
+  &--owner {
+    position: relative;
+  }
 }
+
 
 .questionnaire__item--aim:hover .questionnaire__label--aim::before {
   box-shadow: 0 0 0 1px var(--grey-grey73);
@@ -304,27 +309,28 @@
     line-height: 30px;
   }
 
-  &--email {
-    background-image: url("../img/icon-mail.svg");
-    background-size: 21px 14px;
-    background-position: 93% 50%;
-    background-repeat: no-repeat;
+  // &--email {
+  //   background-image: url("../img/icon-mail.svg");
+  //   background-size: 21px 14px;
+  //   background-position: 93% 50%;
+  //   background-repeat: no-repeat;
 
-    @media (min-width: @tablet-width) {
-      background-position: 97% 49%;
-    }
-  }
+  //   @media (min-width: @tablet-width) {
+  //     background-position: 97% 49%;
+  //   }
 
-  &--phone {
-    background-image: url("../img/icon-phone.svg");
-    background-size: 20px 21px;
-    background-position: 93% 50%;
-    background-repeat: no-repeat;
+  // }
 
-    @media (min-width: @tablet-width) {
-      background-position: 97% 49%;
-    }
-  }
+  // &--phone {
+  //   background-image: url("../img/icon-phone.svg");
+  //   background-size: 20px 21px;
+  //   background-position: 93% 50%;
+  //   background-repeat: no-repeat;
+
+  //   @media (min-width: @tablet-width) {
+  //     background-position: 97% 49%;
+  //   }
+  // }
 
   &--cat,
   &--owner {
@@ -388,7 +394,7 @@
     outline: none;
   }
 
-  &--error {
+  &:invalid {
     box-shadow: 0 0 0 2px var(--pink-basic);
     border-color: transparent;
   }
@@ -579,6 +585,23 @@
       }
     }
   }
+}
+
+.questionnaire__icon {
+  position: absolute;
+  right: 18px;
+}
+
+.questionnaire__input--email:active + .questionnaire__icon--email,
+.questionnaire__input--email:focus + .questionnaire__icon--email,
+.questionnaire__input--phone:active + .questionnaire__icon--phone,
+.questionnaire__input--phone:focus + .questionnaire__icon--phone  {
+  fill: var(--green-basic);
+}
+
+.questionnaire__input--email:invalid + .questionnaire__icon--email,
+.questionnaire__input--phone:invalid + .questionnaire__icon--phone {
+  fill: var(--pink-basic);
 }
 
 .questionnaire__heading {
