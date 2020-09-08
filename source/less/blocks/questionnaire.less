@@ -187,6 +187,21 @@
   }
 }
 
+.questionnaire__item--aim:hover .questionnaire__label--aim::before {
+  box-shadow: 0 0 0 1px var(--grey-grey73);
+}
+
+.questionnaire__input--aim:active + .questionnaire__label--aim,
+.questionnaire__input--additional:active + .questionnaire__label--additional {
+  opacity: 0.3;
+}
+
+.questionnaire__item--additional:hover .questionnaire__label--additional::before,
+.questionnaire__input--additional:focus + .questionnaire__label--additional::before {
+  border: 1px solid var(--grey-grey73);
+}
+
+
 .questionnaire__label {
   font-size: 16px;
   line-height: 18px;
@@ -413,6 +428,10 @@
   }
 }
 
+.questionnaire__input--aim:checked:focus + .questionnaire__label--aim::before {
+  box-shadow: 0 0 0 1px var(--grey-grey73);
+}
+
 .questionnaire__input--additional:checked + .questionnaire__label--additional::before {
   content: "";
 
@@ -434,6 +453,10 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.questionnaire__input--additional:checked:focus + .questionnaire__label--additional::before  {
+  border: 1px solid var(--grey-grey73);
 }
 
 .questionnaire__fieldset-wrapper--owner {
@@ -642,66 +665,7 @@
   }
 
   &--additional {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-
-    // width: 100%;
-    // margin-bottom: 1px;
     padding: 0;
-
-    // &::after {
-    //   content: "";
-
-    //   display: block;
-
-    //   width: calc(100% - 144px);
-    //   height: 2px;
-    //   margin-top: 5px;
-    //   margin-right: -20px;
-
-    //   background-color: var(--green-basic);
-
-    //   @media (min-width: @tablet-width) {
-    //     flex-grow: 1;
-
-    //     width: 447px;
-    //     margin-top: 9px;
-    //     margin-right: -71px;
-    //     margin-bottom: 0;
-    //     margin-left: 42px;
-    //   }
-
-    //   @media (min-width: @desktop-width) {
-    //     margin-top: 7px;
-    //     margin-right: -110px;
-    //     margin-bottom: 0;
-    //     margin-left: 40px;
-    //   }
-    // }
-
-    // @media (min-width: @tablet-width) {
-    //   &::before {
-    //     content: "";
-    //     display: block;
-
-    //     width: 30px;
-    //     height: 2px;
-    //     margin-top: 9px;
-    //     margin-right: 40px;
-    //     margin-left: -70px;
-
-    //     background-color: var(--green-basic);
-
-    //     @media (min-width: @desktop-width) {
-    //       width: 70px;
-    //       height: 2px;
-    //       margin-top: 7px;
-    //       margin-right: 40px;
-    //       margin-left: -110px;
-    //     }
-    //   }
-    // }
   }
 }
 
