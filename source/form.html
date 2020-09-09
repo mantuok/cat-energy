@@ -71,9 +71,7 @@
           </ul>
         </fieldset>
         <fieldset class="questionnaire__fieldset questionnaire__fieldset--owner">
-          <span class="questionnaire__fieldset-wrapper questionnaire__fieldset-wrapper--owner">
-            <legend class="questionnaire__heading questionnaire__heading--owner">Контактные данные (владельца кота)</legend>
-          </span>
+          <h3 class="questionnaire__heading questionnaire__heading--owner">Контактные данные (владельца кота)</h3>
           <ul class="questionnaire__list questionnaire__list--owner">
             <li class="questionnaire__item questionnaire__item--owner">
               <label class="questionnaire__label questionnaire__label--owner" for="email-address">E-mail:*</label>
@@ -84,7 +82,7 @@
             </li>
             <li class="questionnaire__item questionnaire__item--owner">
               <label class="questionnaire__label questionnaire__label--owner" for="phone-number">Телефон:*</label>
-              <input class="questionnaire__input questionnaire__input--owner questionnaire__input--phone" type="tel" name="phone-number" id="phone-number" placeholder="8 (960) 900-60-90" required>
+              <input class="questionnaire__input questionnaire__input--owner questionnaire__input--phone" type="tel" pattern="8 [()][0-9]{3}[()] [0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone-number" id="phone-number" placeholder="8 (960) 900-60-90" required>
               <svg class="questionnaire__icon questionnaire__icon--phone" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
@@ -96,9 +94,7 @@
           <textarea class="questionnaire__input questionnaire__input--comment" id="comment" name="comment" rows="7" cols="41" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <fieldset class="questionnaire__fieldset questionnaire__fieldset--additional">
-          <span class="questionnaire__fieldset-wrapper questionnaire__fieldset-wrapper--additional">
-            <legend class="questionnaire__heading questionnaire__heading--additional">Дополнительно</legend>
-          </span>
+          <h3 class="questionnaire__heading questionnaire__heading--additional">Дополнительно</h3>
           <ul class="questionnaire__list questionnaire__list--additional">
             <li class="questionnaire__item questionnaire__item--additional">
               <input class="questionnaire__input questionnaire__input--additional" type="checkbox" name="sweetener" id="sweetener" checked>

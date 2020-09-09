@@ -59,7 +59,7 @@ exports.styles = styles;
 
 const html = () => {
   return gulp.src("source/*.html", {base: "source"})
-    .pipe(htmlmin())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(rename({
       suffix: ".min"
     }))
