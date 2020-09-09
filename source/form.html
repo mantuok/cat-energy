@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body page-body">
-    <header class="page-header page-header--form page-header--closed container">
+    <header class="page-header page-header--form page-header--open container">
       <a class="page-header__logo-picture-text logo-picture-text" href="index.min.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -15,9 +15,10 @@
           <img class="logo-picture-text__img" src="img/logo-mobile.svg" width="191" height="38" alt="Cat Energy Функциональное питание для котов">
         </picture>
       </a>
-      <button class="page-header__navigation-toggle page-header__navigation-toggle--closed" type="button">
+      <button class="page-header__navigation-toggle page-header__navigation-toggle--open" type="button">
+        <span class="visually-hidden">Меню</span>
       </button>
-      <nav class="page-header__main-navigation main-navigation page-header__main-navigation--closed">
+      <nav class="page-header__main-navigation main-navigation page-header__main-navigation--open">
         <ul class="main-navigation__list site-navigation">
           <li class="site-navigation__item">
             <a class="site-navigation__link site-navigation__link--catalog" href="index.min.html">Главная</a>
@@ -70,15 +71,23 @@
           </ul>
         </fieldset>
         <fieldset class="questionnaire__fieldset questionnaire__fieldset--owner">
-          <legend class="questionnaire__heading questionnaire__heading--owner">Контактные данные (владельца кота)</legend>
+          <span class="questionnaire__fieldset-wrapper questionnaire__fieldset-wrapper--owner">
+            <legend class="questionnaire__heading questionnaire__heading--owner">Контактные данные (владельца кота)</legend>
+          </span>
           <ul class="questionnaire__list questionnaire__list--owner">
             <li class="questionnaire__item questionnaire__item--owner">
               <label class="questionnaire__label questionnaire__label--owner" for="email-address">E-mail:*</label>
               <input class="questionnaire__input questionnaire__input--owner questionnaire__input--email" type="email" name="email-address" id="email-address" placeholder="kuklachev@gmail.com" required>
+              <svg class="questionnaire__icon questionnaire__icon--email" width="20" height="14">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>
             </li>
             <li class="questionnaire__item questionnaire__item--owner">
               <label class="questionnaire__label questionnaire__label--owner" for="phone-number">Телефон:*</label>
               <input class="questionnaire__input questionnaire__input--owner questionnaire__input--phone" type="tel" name="phone-number" id="phone-number" placeholder="8 (960) 900-60-90" required>
+              <svg class="questionnaire__icon questionnaire__icon--phone" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
             </li>
           </ul>
         </fieldset>
@@ -87,7 +96,9 @@
           <textarea class="questionnaire__input questionnaire__input--comment" id="comment" name="comment" rows="7" cols="41" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <fieldset class="questionnaire__fieldset questionnaire__fieldset--additional">
-          <legend class="questionnaire__heading questionnaire__heading--additional">Дополнительно</legend>
+          <span class="questionnaire__fieldset-wrapper questionnaire__fieldset-wrapper--additional">
+            <legend class="questionnaire__heading questionnaire__heading--additional">Дополнительно</legend>
+          </span>
           <ul class="questionnaire__list questionnaire__list--additional">
             <li class="questionnaire__item questionnaire__item--additional">
               <input class="questionnaire__input questionnaire__input--additional" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -121,10 +132,10 @@
           <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</p>
         </div>
         <div class="contacts__map-wrapper">
-          <iframe class="contacts__map contacts__map--interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6156300622001!2d30.320561316093325!3d59.93851998187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzE4LjciTiAzMMKwMTknMjEuOSJF!5e0!3m2!1sru!2sru!4v1595017535389!5m2!1sru!2sru" width="320" height="361" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="contacts__map contacts__map--interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6156300622001!2d30.320561316093325!3d59.93851998187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzE4LjciTiAzMMKwMTknMjEuOSJF!5e0!3m2!1sru!2sru!4v1595017535389!5m2!1sru!2sru" width="320" height="361" allowfullscreen="" aria-hidden="false" tabindex="0" title="Карта: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
           <picture>
             <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
             <img class="contacts__map contacts__map--static" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           </picture>
         </div>
@@ -137,7 +148,7 @@
           <h2 class="visually-hidden">Мы в социальных сетях</h2>
           <ul class="social__list">
             <li class="social__item social__item--vk">
-              <a href="https://vk.com/" target="_blank">
+              <a class="social__link" href="https://vk.com/" target="_blank">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social__icon social__icon--vk" width="23" height="16">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
@@ -145,7 +156,7 @@
               </a>
             </li>
             <li class="social__item social__item--instagram">
-              <a href="https://www.instagram.com/" target="_blank">
+              <a class="social__link" href="https://www.instagram.com/" target="_blank">
                 <span class="visually-hidden">Instagram</span>
                 <svg class="social__icon social__icon--instagram" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-insta"></use>
@@ -153,7 +164,7 @@
               </a>
             </li>
             <li class="social__item social__item--facebook">
-              <a href="https://www.facebook.com/" target="_blank">
+              <a class="social__link" href="https://www.facebook.com/" target="_blank">
                 <span class="visually-hidden">Facebook</span>
                 <svg class="social__icon social__icon--facebook" width="22" height="20">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
@@ -166,7 +177,7 @@
           <h2 class="visually-hidden">Разработано при поддержке</h2>
           <a class="powered-by__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
             <span>HTML Academy</span>
-            <svg class="powered-by__logo" width="27" height="34">
+            <svg class="powered-by__logo" width="32" height="39">
               <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
             </svg>
           </a>
