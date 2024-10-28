@@ -51,9 +51,13 @@ const styles = () => {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
-}
+};
 
+const defaultTask = gulp.series(styles);
+
+// Export tasks
 exports.styles = styles;
+exports.default = defaultTask; // Set the default task
 
 // Html
 
